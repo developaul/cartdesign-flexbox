@@ -1,0 +1,61 @@
+
+/* Global */
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        padding: 1.4rem 0;
+    }
+
+    .carrito-compras {
+        position: relative;
+
+        &:hover .contenido{
+            display: block;
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            padding: 1rem;
+            background-color: $grey;
+            width: 300px;
+
+            @include telefone() {
+                width: 400px;
+            }
+            
+            @include tablet() {
+                width: 500px;
+            }
+
+            @include desktop() {
+                width: 600px;
+            }
+        }
+
+        &:hover .contenido .column{
+            text-align: center;
+        }
+
+        &:hover .contenido img{
+            width: 150px;
+        }
+
+        &:hover .boton {
+            @include button( $first_color );
+        }
+    }
+}
+
+

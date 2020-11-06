@@ -1,0 +1,29 @@
+/* Button */
+@mixin button( $background-color ) {
+    display: block;
+    background-color: $background-color;
+    text-decoration: none;
+    color: $white;
+    text-align: center;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+}
+
+/* Media Queries */
+@mixin telefone() {
+    @media only screen and ( min-width: #{ $telefone } ) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media only screen and ( min-width: #{ $tablet } ) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media only screen and ( min-width: #{ $desktop } ) {
+        @content;
+    }
+}
