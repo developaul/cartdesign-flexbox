@@ -1,6 +1,6 @@
 /* Global */
 html {
-    box-sizing: border-box;
+    @include box-sizing( border-box );
 }
   
 *,
@@ -20,6 +20,10 @@ body {
 
 .oculto {
     display: none;
+}
+
+.centrado {
+    text-align: center;
 }
 
 /* Header */
@@ -164,5 +168,68 @@ body {
                 @include background-image( '../img/icono3.png' );
             }
         }
+    }
+}
+
+/* Cursos */
+.cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    .curso {
+        flex: 0 1 calc( 100% - 1rem );
+        border: 1px solid $border_color;
+        margin: 0 auto 1rem;
+
+        .imagen-curso {
+            width: 100%;
+        }
+
+        @include telefone() {
+            flex: 0 1 calc( 50% - 1rem );
+        }
+
+        @include tablet() {
+            flex: 0 1 calc( 33% - 1rem );
+        }
+
+        @include desktop() {
+            flex: 0 1 calc( 25% - 1rem );
+        }
+
+    }
+
+}
+
+.info-curso {
+    padding: 1rem;
+    position: relative;
+
+    h4 {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    .precio {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .regular {
+            text-decoration: line-through;
+            color: $red;
+        }
+
+        .oferta {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: $yellow;
+        }
+
+    }
+
+    .boton {
+        @include button( $second_color );
     }
 }

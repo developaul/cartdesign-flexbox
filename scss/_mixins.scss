@@ -9,6 +9,11 @@
     margin-top: 1rem;
 }
 
+/* Box Sizing */
+@mixin box-sizing( $box-model ) {
+    box-sizing: $box-model;
+}
+
 /* Images */
 @mixin background-image( $image ) {
     background-image: url( $image );

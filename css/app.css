@@ -3,6 +3,7 @@
 /* Colores */
 /* Tamaños de Media Queries */
 /* Button */
+/* Box Sizing */
 /* Images */
 /* Gradient */
 /* Media Queries */
@@ -28,6 +29,10 @@ body {
 
 .oculto {
   display: none;
+}
+
+.centrado {
+  text-align: center;
 }
 
 /* Header */
@@ -203,4 +208,76 @@ body {
   background-image: url("../img/icono3.png");
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+/* Cursos */
+.cursos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cursos .curso {
+  flex: 0 1 calc( 100% - 1rem);
+  border: 1px solid #d9d9d9;
+  margin: 0 auto 1rem;
+}
+
+.cursos .curso .imagen-curso {
+  width: 100%;
+}
+
+@media only screen and (min-width: 480px) {
+  .cursos .curso {
+    flex: 0 1 calc( 50% - 1rem);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .cursos .curso {
+    flex: 0 1 calc( 33% - 1rem);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cursos .curso {
+    flex: 0 1 calc( 25% - 1rem);
+  }
+}
+
+.info-curso {
+  padding: 1rem;
+  position: relative;
+}
+
+.info-curso h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.info-curso .precio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-curso .precio .regular {
+  text-decoration: line-through;
+  color: #FF2419;
+}
+
+.info-curso .precio .oferta {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #FBA905;
+}
+
+.info-curso .boton {
+  display: block;
+  background-color: #741D51;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: .5rem 1rem;
+  margin-top: 1rem;
 }
