@@ -188,6 +188,7 @@ body {
 
         @include telefone() {
             flex: 0 1 calc( 50% - 1rem );
+            margin: 0 0 1rem 0;
         }
 
         @include tablet() {
@@ -232,4 +233,24 @@ body {
     .boton {
         @include button( $second_color );
     }
+}
+
+/* Footer */
+.footer {
+    margin-top: 1rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid $border_color;
+
+    .contenedor-footer{
+        display: flex;
+        flex-direction: column;
+
+        @include telefone() {
+            flex-direction: row;
+        }
+    } 
+}
+
+.menu {
+    @include menus();
 }

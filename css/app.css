@@ -7,6 +7,7 @@
 /* Images */
 /* Gradient */
 /* Media Queries */
+/* Menu */
 /* Global */
 html {
   box-sizing: border-box;
@@ -230,6 +231,7 @@ body {
 @media only screen and (min-width: 480px) {
   .cursos .curso {
     flex: 0 1 calc( 50% - 1rem);
+    margin: 0 0 1rem 0;
   }
 }
 
@@ -280,4 +282,41 @@ body {
   text-align: center;
   padding: .5rem 1rem;
   margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+  margin-top: 1rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #d9d9d9;
+}
+
+.footer .contenedor-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 480px) {
+  .footer .contenedor-footer {
+    flex-direction: row;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000000;
+  margin-bottom: .5rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .menu {
+    flex: 0 1 calc( 30% - 1rem);
+  }
 }

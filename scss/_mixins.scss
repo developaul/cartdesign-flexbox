@@ -44,3 +44,21 @@
         @content;
     }
 }
+
+/* Menu */
+@mixin menus() {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    flex: 1;
+
+    a {
+        text-decoration: none;
+        color: $black;
+        margin-bottom: .5rem;
+    }
+
+    @include desktop() {
+        flex: 0 1 calc( 30% - 1rem );
+    }
+}
