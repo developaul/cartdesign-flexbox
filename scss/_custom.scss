@@ -85,7 +85,7 @@ body {
 
         h2 {
             font-weight: 400;
-            font-size: 1.4rem;
+            font-size: 2.4rem;
         }
 
         p {
@@ -115,6 +115,53 @@ body {
 
             @include tablet() {
                 width: 40%;
+            }
+        }
+    }
+}
+
+/* Barra */
+.barra {
+    min-height: 6rem;
+    padding: 1rem;
+    @include background-gradient( $second_color, $third_color );
+    color: $white;
+    display: flex;
+    align-items: center;
+
+    .iconos {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        @include desktop() {
+            flex-direction: row;
+        }
+
+        .icono {
+            flex: 1;
+            background-position: 5% center !important;
+            background-size: 2.4rem;
+            text-align: center;
+            
+            @include tablet() {
+                background-position: 20% center !important;
+            }
+
+            @include desktop() {
+                background-position: left center !important;
+            }
+
+            &.icono1 {
+                @include background-image( '../img/icono1.png' );
+            }
+        
+            &.icono2 {
+                @include background-image( '../img/icono2.png' );
+            }
+        
+            &.icono3 {
+                @include background-image( '../img/icono3.png' );
             }
         }
     }

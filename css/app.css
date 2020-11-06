@@ -4,6 +4,7 @@
 /* Tamaños de Media Queries */
 /* Button */
 /* Images */
+/* Gradient */
 /* Media Queries */
 /* Global */
 html {
@@ -108,7 +109,7 @@ body {
 
 .hero .contenido-hero h2 {
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 2.4rem;
 }
 
 .hero .contenido-hero p {
@@ -143,4 +144,63 @@ body {
   .hero .contenido-hero form {
     width: 40%;
   }
+}
+
+/* Barra */
+.barra {
+  min-height: 6rem;
+  padding: 1rem;
+  background-image: linear-gradient(to right, #741D51 0%, #E44E52 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+
+.barra .iconos {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+  .barra .iconos {
+    flex-direction: row;
+  }
+}
+
+.barra .iconos .icono {
+  flex: 1;
+  background-position: 5% center !important;
+  background-size: 2.4rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .barra .iconos .icono {
+    background-position: 20% center !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .barra .iconos .icono {
+    background-position: left center !important;
+  }
+}
+
+.barra .iconos .icono.icono1 {
+  background-image: url("../img/icono1.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.barra .iconos .icono.icono2 {
+  background-image: url("../img/icono2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.barra .iconos .icono.icono3 {
+  background-image: url("../img/icono3.png");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
